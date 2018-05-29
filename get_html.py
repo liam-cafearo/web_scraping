@@ -21,11 +21,14 @@ first '<' character that matches the string that we pass through.
 We want to search for everything from the end of the tag -
 i.e. ">This text"
 To achieve this we'll add the length of the 'start_tag' to the index of '<'
-charcter.
+character.
 
 This won't be necessary for the end tag. We just need the index for the '<'
 character.
 """
+# By adding the length of the start_tag it means the index starts
+# after the start tag so that it doesn't include 
+# the opening <title> tag.
 start_index = html_text.find(start_tag) + len(start_tag)
 end_index = html_text.find(end_tag)
 
