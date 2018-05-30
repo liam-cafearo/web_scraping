@@ -13,6 +13,7 @@ images = soup.find_all("img")
 # Iterate over 'images' list and
 # print the 'src' of each image
 for img in images:
-    # the below uses square bracket notation to select the 'src' key
+    # the below uses square bracket notation (which can also
+    # be used for numerical indicies) to select the 'src' key
     # from the images tuple.
     print img['src']
